@@ -1,0 +1,29 @@
+/* src/components/BackgroundSlider.css */
+
+.background-slider {
+  position: fixed; /* Ensure the slider stays fixed in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the slider behind other elements */
+  overflow: hidden;
+}
+
+.background-slider .slick-slide img {
+  width: 100%;
+  height: 100vh; /* Ensure the image covers the full viewport height */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+/* Optional: Add a slight overlay to enhance contrast with the login form */
+.background-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Adjust opacity and color as needed */
+  pointer-events: none; /* Allow clicks to pass through */
+}

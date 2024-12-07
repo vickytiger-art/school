@@ -1,0 +1,145 @@
+/* General Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.95); /* Slightly opaque for elegance */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 100%; /* Allow the container to adapt to smaller screens */
+  margin: 20px auto;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
+  backdrop-filter: blur(10px); /* Subtle blur effect for sophistication */
+  border: 8px double transparent;
+  border-image: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1) 1;
+  overflow-x: hidden;
+}
+
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f, #f5f7fa, #d9e7ff, #cce5df, #eafdcf, #fef6e4, #fddde6);
+  background-size: 400% 400%; /* To create a subtle animation effect */
+  animation: gradientShift 12s ease infinite; /* Smooth gradient animation */
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Class Selection Grid */
+.c-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+}
+
+.c-col {
+  flex: 0 1 calc(20% - 20px);
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #eaf4f9);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.c-col:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+}
+
+.c-col label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #34495e;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.c-col label:hover {
+  color: #007bb5;
+}
+
+.c-col input[type='checkbox'] {
+  display: none;
+}
+
+.c-col label::before {
+  content: '⬜';
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.2rem;
+  color: #00a8ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.c-col input[type='checkbox']:checked + label::before {
+  content: '✅';
+  color: #28a745;
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .c-col {
+    flex: 0 1 calc(25% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .c-row {
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .c-col {
+    flex: 0 1 calc(45% - 15px);
+  }
+
+  .container {
+    margin: 10px auto; /* Reduce container margin */
+    padding: 15px; /* Reduce padding for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .c-col {
+    flex: 0 1 calc(100% - 10px); /* Single column for narrow screens */
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+    border-radius: 10px; /* Slightly smaller radius for small screens */
+  }
+}
+
+/* Sidebar Compatibility */
+.sidebar-open .container {
+  max-width: calc(100% - 250px); /* Adjust width when the sidebar is open */
+  margin-left: 250px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-closed .container {
+  max-width: 100%; /* Full-width when sidebar is closed */
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+}

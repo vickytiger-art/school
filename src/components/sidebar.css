@@ -1,0 +1,59 @@
+/* Sidebar background with Indian flag colors */
+.sidebar-nav {
+    background: linear-gradient(to bottom, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 100%);
+    color: white;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Sidebar menu item styling */
+  .sidebar-nav .c-nav-item {
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px; /* Rounded edges for better visuals */
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  /* Text colors based on background section */
+  
+  /* For deep saffron background, menu names are green */
+  .sidebar-nav .c-nav-item:nth-child(odd):nth-child(n+1):nth-child(-n+3) {
+    color: #138808; /* Green text */
+  }
+  
+  /* For white background, menu names are green */
+  .sidebar-nav .c-nav-item:nth-child(n+4):nth-child(-n+6) {
+    color: #138808; /* Green text */
+  }
+  
+  /* For green background, menu names are white */
+  .sidebar-nav .c-nav-item:nth-child(n+7) {
+    color: #FFFFFF; /* White text */
+  }
+  
+  /* Active menu item */
+  .sidebar-nav .c-nav-link.active {
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Highlight with light border */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Glow effect */
+    color: inherit; /* Inherit the default color for the section */
+  }
+  
+  /* Hover effect: glowing border around the menu */
+  .sidebar-nav .c-nav-item:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Light border */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Glow effect */
+  }
+  
+  /* Styling for menu item icons */
+  .sidebar-nav .c-nav-item .nav-icon {
+    margin-right: 10px;
+    color: inherit; /* Match icon color to text */
+  }
+  

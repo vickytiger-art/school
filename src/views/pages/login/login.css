@@ -1,0 +1,248 @@
+/* Login.css */
+
+/* Light Gradient Background for the Entire Page */
+/* .login-bg {
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+} */
+
+/* Animated Gradient Keyframes for the Page Background */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Initial Blast Effect */
+.initial-blast {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 0, 150, 0.3) 0%, rgba(0, 204, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+  animation: initialBlast 2s ease-out forwards;
+  z-index: 1;
+}
+
+@keyframes initialBlast {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* Login Card Styles with Light Gradient */
+.login-card {
+  border-radius: 20px;
+  padding: 40px;
+  background: linear-gradient(135deg, #87CEFA, #FFB6C1, #ADD8E6, #FF77FF, #90EE90);
+  /* The above colors are:
+     - Sky Blue (#87CEFA)
+     - Light Pink (#FFB6C1)
+     - Light Blue (#ADD8E6)
+     - Light Magenta (#FF77FF)
+     - Light Green (#90EE90) */
+  backdrop-filter: blur(10px); /* Adds a blur effect for a modern look */
+  position: relative;
+  z-index: 2; /* Ensure it's above the slider */
+  overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Form Hiding Animation */
+.hide-form {
+  transform: scale(0.95);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Show/Hide Animations for Password and Username Fields */
+.password-group.hidden,
+.username-group.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.password-group.visible,
+.username-group.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Input Field Styles */
+.input-field {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  outline: none;
+  background-color: #f9fafb;
+}
+
+/* Input Icon Styles */
+.input-icon {
+  background-color: #f1f5f9;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+/* Login Button Styles */
+.login-btn {
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.login-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Forgot Password Link Styles */
+.login-link {
+  color: #3b82f6;
+  transition: color 0.3s;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.login-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Welcome Message Styles */
+.welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #87CEFA, #FFB6C1, #ADD8E6, #FF77FF, #90EE90);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: welcomeBlast 2s ease forwards;
+  z-index: 3; /* Above other elements */
+}
+
+@keyframes welcomeBlast {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Success Blast Effect */
+.success-blast {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(0, 204, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%);
+  animation: successBlast 1.5s ease-out forwards;
+  z-index: 2;
+}
+
+@keyframes successBlast {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+/* Titles with Fade-In Animations */
+.login-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+  text-align: center;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: titleFadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes titleFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.login-subtitle {
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: subtitleFadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes subtitleFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 20px;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .login-subtitle {
+    font-size: 1rem;
+  }
+
+  .welcome-message {
+    font-size: 2rem;
+  }
+}
