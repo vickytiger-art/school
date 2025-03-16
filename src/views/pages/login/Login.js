@@ -38,41 +38,42 @@ const Login = () => {
   }, [])
 
   const handleLogin = (e) => {
-    e.preventDefault();
+    navigate('/dashboard');
+    // e.preventDefault();
 
-    // Reset previous error message
-    setErrorMessage('');
+    // // Reset previous error message
+    // setErrorMessage('');
 
-    // Make API request to login
-    fetch('http://localhost:5000/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Invalid credentials');
-        }
-        return response.text(); // Handle response data (e.g., success message)
-      })
-      .then((data) => {
-        // Trigger login success animation
-        setLoginSuccess(true);
+    // // Make API request to login
+    // fetch('http://localhost:5000/login', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ username, password }),
+    // })
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw new Error('Invalid credentials');
+    //     }
+    //     return response.text(); // Handle response data (e.g., success message)
+    //   })
+    //   .then((data) => {
+    //     // Trigger login success animation
+    //     setLoginSuccess(true);
 
-        // Hide the form after triggering the animation
-        setTimeout(() => setFormStage(4), 500); // Start hiding form after 0.5s
-        // Reset the login success after showing the message
-        setTimeout(() => {
-          navigate('/dashboard');
-          setLoginSuccess(false);
-          setFormStage(0); // Reset form stage if needed
-        }, 5000);
-      })
-      .catch((error) => {
-        setErrorMessage(error.message);
-      });
+    //     // Hide the form after triggering the animation
+    //     setTimeout(() => setFormStage(4), 500); // Start hiding form after 0.5s
+    //     // Reset the login success after showing the message
+    //     setTimeout(() => {
+    //       navigate('/dashboard');
+    //       setLoginSuccess(false);
+    //       setFormStage(0); // Reset form stage if needed
+    //     }, 5000);
+    //   })
+    //   .catch((error) => {
+    //     setErrorMessage(error.message);
+    //   });
   };
 
   return (

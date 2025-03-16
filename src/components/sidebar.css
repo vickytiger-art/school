@@ -1,4 +1,4 @@
-/* Sidebar background with Indian flag colors */
+Sidebar background with Indian flag colors
 .sidebar-nav {
     background: linear-gradient(to bottom, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 100%);
     color: white;

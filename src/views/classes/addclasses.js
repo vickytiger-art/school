@@ -19,25 +19,25 @@ const ClassSelection = () => {
   const navigate = useNavigate();
 
   // Fetch active classes on mount
-  useEffect(() => {
-    fetch('http://localhost:5000/classes')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        // Filter active classes (status === '1')
-        const activeClasses = data
-          .filter((item) => item.status === '1')
-          .map((item) => item.class_name);
-        setSelectedClasses(activeClasses);
-      })
-      .catch((error) => {
-        console.error('Error fetching classes:', error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:5000/classes')
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       // Filter active classes (status === '1')
+  //       const activeClasses = data
+  //         .filter((item) => item.status === '1')
+  //         .map((item) => item.class_name);
+  //       setSelectedClasses(activeClasses);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching classes:', error);
+  //     });
+  // }, []);
 
   // Handle checkbox selection
   const handleCheckboxChange = (className) => {
