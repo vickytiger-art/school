@@ -22,6 +22,7 @@ const StudentAttendance = () => {
     { id: 4, rollNo: '104', name: 'Sanya Kapoor', fatherName: 'Vikas Kapoor', contact: '9876543213', section: 'B', present: false },
     { id: 5, rollNo: '105', name: 'Kabir Joshi', fatherName: 'Pradeep Joshi', contact: '9876543214', section: 'C', present: false },
   ]);
+  // alert(JSON.stringify(students))
 
   // Toggle Attendance
   const handleAttendanceChange = (id) => {
@@ -97,7 +98,7 @@ const StudentAttendance = () => {
   return (
     <div className="attendance-container">
       <h2 className="attendance-title">Student Attendance</h2>
-      
+
       {/* Controls: Search and Section Selection */}
       <div className="attendance-controls">
         <TextField
@@ -120,18 +121,29 @@ const StudentAttendance = () => {
             <MenuItem key={sec} value={sec}>{sec}</MenuItem>
           ))}
         </TextField>
+        <Button
+          onClick={() => navigate('/classes/Lkg/lkgFeeList')}
+          variant="contained"
+          color="secondary"
+          className="fee-management-btn"
+        >
+          Manage Fees
+        </Button>
         <Button onClick={handleAddStudent} variant="contained" color="primary" className="add-student-btn">
           Add Student
         </Button>
+
       </div>
+
+
 
       {/* Attendance Table */}
       <Paper className="attendance-table-container">
-        <DataGrid 
-          rows={filteredStudents} 
-          columns={columns} 
-          pageSize={5} 
-          autoHeight 
+        <DataGrid
+          rows={filteredStudents}
+          columns={columns}
+          pageSize={5}
+          autoHeight
         />
       </Paper>
     </div>

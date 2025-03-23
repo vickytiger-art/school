@@ -1,0 +1,84 @@
+/* feeDetails.css */
+
+/* Full-page background for Fee Details Page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('../../../assets/images/teddy.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  
+  /* Semi-transparent overlay to ensure readability */
+  .fee-details-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Container for Fee Details */
+  .fee-details-container {
+    background: #FFF9E3;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Title styling for Fee Details */
+  .fee-details-title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #FF6347;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the details content */
+  .fee-details-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  /* List styling for fee submissions */
+  .fee-details-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .fee-details-content li {
+    background: #FFEFD5;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Back button styling */
+  .fee-details-back-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1em;
+    background-color: #FF6347;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fee-details-back-btn:hover {
+    background-color: #FF4500;
+  }
+  

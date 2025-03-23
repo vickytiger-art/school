@@ -60,9 +60,11 @@ const addsections = React.lazy(() => import('./views/classes/addsections'))
 
 // const Addstudent = React.lazy(() => import('./views/classes/Addstudent'))
 // LKG
-const lkg = React.lazy(() => import('./views/classes/Lkg/lkg'));
+const lkg = React.lazy(() => import('./views/classes/Lkg/lkg')); 
 const addlkg = React.lazy(() => import('./views/classes/Lkg/Addlkgstudent'));
 const editlkg = React.lazy(() => import('./views/classes/Lkg/Editlkgstudent'));
+const lkgFeeList = React.lazy(() => import('./views/classes/Lkg/lkgFeeList'));
+const FeeDetailsPage = React.lazy(() => import('./views/classes/Lkg/FeeDetailsPage'));
 
 // UKG
 const ukg = React.lazy(() => import('./views/classes/Ukg/ukg'));
@@ -167,7 +169,8 @@ const routes = [
 { path: '/classes/Lkg/lkg', name: 'LKG', element: lkg },
 { path: '/classes/Lkg/Addlkgstudent', name: 'Add LKG', element: addlkg },
 { path: '/classes/Lkg/Editlkgstudent', name: 'Edit LKG', element: editlkg },
-
+{ path: '/classes/Lkg/lkgFeeList', name: 'Fees LKG', element: lkgFeeList },
+{ path: '/classes/Lkg/FeeDetailsPage', name: 'Fees Details', element: FeeDetailsPage },
 // UKG
 { path: '/classes/Ukg/ukg', name: 'UKG', element: ukg },
 { path: '/classes/Ukg/Addukgstudent', name: 'Add UKG', element: addukg },
