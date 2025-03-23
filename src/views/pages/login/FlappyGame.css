@@ -1,0 +1,25 @@
+.game-container {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 200px;
+  background: lightblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.bird {
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.instructions {
+  font-size: 14px;
+  color: darkblue;
+}
