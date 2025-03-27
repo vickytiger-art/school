@@ -139,6 +139,19 @@ const edittwelfth = React.lazy(() => import('./views/classes/Twelfth/Edittwelfth
 const Teacher = React.lazy(() => import('./views/Teachers/Teacher'))
 const AddTeachers = React.lazy(() => import('./views/Teachers/AddTeachers'))
 
+//sports
+const Teams = React.lazy(() => import('./views/Sports/Teams'))
+
+//Gallery
+const Gallery = React.lazy(() => import('./views/Gallery/Gallery'))
+
+//Events
+const Events = React.lazy(() => import('./views/Events/Events'))
+const EventDetails = React.lazy(() => import('./views/Events/EventDetails'))
+
+
+
+
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -239,6 +252,17 @@ const routes = [
 
 { path: '/Teachers/Teacher', name: 'Teacher', element: Teacher },
   { path: '/Teachers/AddTeachers', name: 'AddTeachers', element: AddTeachers },
+
+  // sports
+  { path: '/Sports/Teams', name: 'Khelo Kuddo', element: Teams },
+
+  //Gallery
+
+  { path: '/Gallery/Gallery', name: 'Gallery', element: Gallery },
+
+  //Events
+  { path: '/Events/Events', name: 'Events', element: Events },
+  { path: '/Events/EventDetails', name: 'EventDetails', element: EventDetails },
 
 ]
 

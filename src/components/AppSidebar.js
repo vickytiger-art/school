@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
+import './SidebarStyles.css';
 import {
   CCloseButton,
   CSidebar,

@@ -113,30 +113,22 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* ABC Learning Game */}
-      <div className="dashboard-section">
-        <h2>🎮 ABC Learning Game</h2>
-        <div className="game-card">
-          <FaGamepad />
-          <button className="play-btn" onClick={openGame}>Click to Play</button>
-
-        </div>
-        {showGame && (
-  <div className="game-overlay">
-    <div className="game-container">
-      <h2>Learn ABC</h2>
-      <p>Tap on the letters to learn!</p>
-      <button onClick={closeGame} className="close-btn">Close</button>
-    </div>
-  </div>
-)}
-      </div>
+    
 
       {/* Sports Team Popup */}
       {selectedTeam && (
         <div className="popup">
           <div className="popup-content">
             <h2>{selectedTeam} Team Members</h2>
+            <p>1. Player One</p>
+            <p>2. Player Two</p>
+            <p>3. Player Three</p>
+            <p>1. Player One</p>
+            <p>2. Player Two</p>
+            <p>3. Player Three</p>
+            <p>1. Player One</p>
+            <p>2. Player Two</p>
+            <p>3. Player Three</p>
             <p>1. Player One</p>
             <p>2. Player Two</p>
             <p>3. Player Three</p>

@@ -205,13 +205,15 @@ body {
   }
   
   .popup-content {
-    background: white;
+    background: linear-gradient(to right, #e6dce8, #62d058);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 20%;
+    height: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
+    overflow-y: auto;
+}
   
   .popup-content h2 {
     color: #2b6cb0;
@@ -230,4 +232,10 @@ body {
   .popup-content button:hover {
     background: #e53935;
   }
+
+  @media (max-width: 750px) {
+    .popup-content {
+      width: 50%;
+    }
+}
   
